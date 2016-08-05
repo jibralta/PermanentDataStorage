@@ -10,10 +10,34 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var entryField: UITextField!
+  //  var number = "placeholder"
+    
+    @IBAction func save(_ sender: AnyObject) {
+        
+    UserDefaults.standard.set(entryField.text, forKey: "number")
+        
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let numberObject = UserDefaults.standard.object(forKey: "number")
+        
+        if let number = numberObject as? String {
+            
+        entryField.text = number
+            
+        }
+    
+    
     }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
