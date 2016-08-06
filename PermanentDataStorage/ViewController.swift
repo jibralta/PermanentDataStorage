@@ -18,9 +18,7 @@ class ViewController: UIViewController {
     UserDefaults.standard.set(entryField.text, forKey: "number")
         
     }
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
