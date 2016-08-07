@@ -6,6 +6,10 @@
 //  Copyright © 2016 Joy Umali. All rights reserved.
 //
 
+
+// Testing Testing Discard All Changes
+
+
 import UIKit
 
 class ViewController: UIViewController {
@@ -19,6 +23,7 @@ class ViewController: UIViewController {
         
     }
     
+    @IBOutlet var displayLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -30,6 +35,8 @@ class ViewController: UIViewController {
         if let number = numberObject as? String {
             
         entryField.text = number
+        
+        displayLabel.text = number
             
         }
     
